@@ -1,0 +1,39 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f4f7f6
+}
+
+h2 {
+    color: black;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.navbar {
+    background-color: #001F3F
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h6 {
+    color: #666;
+    font-size: 0.8 rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card h3 {
+    color: #333;
+    font-weight: bold;
+}
