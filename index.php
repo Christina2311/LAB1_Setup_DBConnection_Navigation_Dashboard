@@ -60,7 +60,7 @@ $revenue = $revRow["S"];
 
         <div class="mt-5 d-flex align-items-center justify-content-start px-3">
             <span class="fw-bold me-3">Quick links:</span>
-            <a href="/assessment_beginner/page/client_add.php" class="btn btn-outline-primary btn-sm me-2">Add Client</a>
+            <a href="/assessment_beginner/page/clients_add.php" class="btn btn-outline-primary btn-sm me-2">Add Client</a>
             <a href="/assessment_beginner/page/booking_create.php" class="btn btn-outline-success btn-sm">Create Booking</a>
         </div>
     </div>

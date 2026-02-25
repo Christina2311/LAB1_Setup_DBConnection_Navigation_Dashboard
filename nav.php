@@ -10,7 +10,7 @@
     <!-- Bootstrap Icons -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     
-        <link rel="stylesheet" href="index_style.css">
+        <link rel="stylesheet" href="style.css">
         <title>Navigation</title>
     </head>
 
@@ -32,10 +32,10 @@
                         <a class="nav-link active" aria-current="page" href="/assessment_beginner/index.php">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/assessment_beginner/page/client_list.php">Client</a>
+                        <a class="nav-link" href="/assessment_beginner/page/clients_list.php">Client</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/assessment_beginner/page/services_list.php">Services</a>
+                        <a class="nav-link" href="/assessment_beginner/page/service_list.php">Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/assessment_beginner/page/booking_list.php">Bookings</a>
