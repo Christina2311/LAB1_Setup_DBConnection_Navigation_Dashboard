@@ -1,6 +1,7 @@
 body{
     font-family: 'Times New Roman', Times, serif;
     background-color: #f4f7f6;
+    padding-top: 70px;
 }
 
 h2 {
@@ -11,7 +12,7 @@ h2 {
 }
 
 .navbar {
-    background-color: #001F3F;
+    background-color: #001F3F !important;
 }
 
 .card {
@@ -19,7 +20,6 @@ h2 {
     border-radius: 12px !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: none;
-    transition: transform 0.2s ease-in-out;
 }
 
 .card:hover {
@@ -39,6 +39,10 @@ h2 {
     font-weight: bold;
 }
 
+.table-dark {
+    background-color: #001F3F !important;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -47,8 +51,9 @@ table {
 }
 
 th {
-    background-color: steelblue;
-    border: 1px solid whitesmoke;
+    background-color: #001F3F !important;
+    color: white !important;
+    border: none !important;
     padding: 8px;
     text-align: center;
 }
@@ -57,16 +62,6 @@ td {
     border: 1px solid whitesmoke;
     padding: 4px;
     text-align: center;
-}
-
-form {
-    background: #CABA9C;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    max-width: 500px; 
-    width: 90%;       
-    margin: 5% auto;
 }
 
 input[type="text"],
@@ -86,19 +81,14 @@ input[type="number"] {
 }
 
 .btn {
-    flex: 1;
-    padding: 12px;
-    border-radius: 8px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    width: auto;
 }
 
-.btn-half {
-    width: 50%;      /* Makes it half the width of the container */
-    max-width: 200px; /* Prevents it from getting too large on big screens */
-    display: inline-block; 
-    flex: none;       /* Overrides the flex: 1 in your current style.css */
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
 }

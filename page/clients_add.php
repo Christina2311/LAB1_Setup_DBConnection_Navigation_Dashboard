@@ -21,20 +21,18 @@ if (isset($_POST['save'])) {
 ?>
 
 <!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Add Client</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body class="bg-light">
-    <?php include "../nav.php"; ?>
+    <head>
+        <meta charset="utf-8">
+        <title>Add Client</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body class="bg-light">
+        <?php include "../nav.php"; ?>
 
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card p-4">
+        <div class="container mt-5 p-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6 p-4 shadow-sm">
                     <h2 class="mb-4">Register New Client</h2>
                     
                     <?php if($message): ?>
@@ -66,6 +64,5 @@ if (isset($_POST['save'])) {
                 </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>
