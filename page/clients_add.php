@@ -1,5 +1,5 @@
 <?php
-include "../db.php";
+include "../config/db.php";
 $message = "";
 
 if (isset($_POST['save'])) {
@@ -28,7 +28,7 @@ if (isset($_POST['save'])) {
         <link rel="stylesheet" href="../style.css">
     </head>
     <body class="bg-light">
-        <?php include "../nav.php"; ?>
+        <?php include "../components/nav.php"; ?>
 
         <div class="container mt-5 p-5">
             <div class="row justify-content-center">

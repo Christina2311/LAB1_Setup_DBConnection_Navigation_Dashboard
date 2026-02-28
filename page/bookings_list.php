@@ -1,5 +1,5 @@
 <?php
-include "../db.php";
+include "../config/db.php";
  
 $sql = "
 SELECT b.*, c.full_name AS client_name, s.service_name
@@ -22,7 +22,7 @@ $result = mysqli_query($conn, $sql);
   </head>
   
     <body class="bg-light">
-        <?php include "../nav.php"; ?>
+        <?php include "../components/nav.php"; ?>
   
         <div class="container mt-5 p-5">
             <div class="row justify-content-center">

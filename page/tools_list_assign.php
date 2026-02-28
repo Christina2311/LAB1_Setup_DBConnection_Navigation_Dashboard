@@ -1,5 +1,5 @@
 <?php
-include "../db.php";
+include "../config/db.php";
  
 $message = "";
  
@@ -50,7 +50,8 @@ $bookings = mysqli_query($conn, "SELECT booking_id FROM bookings ORDER BY bookin
         </style>
     </head>
     <body class="bg-light">
-        <?php include "../nav.php"; ?>
+
+        <?php include "../components/nav.php"; ?>
 
         <div class="container mt-5 pt-4">
             <h2 class="mb-5 text-center">Tools Management</h2>

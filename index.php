@@ -1,12 +1,18 @@
 <?php
-include "db.php";
 
-$clients = mysqli_fetch_assoc(mysqli_query($conn,"SELECT COUNT(*) AS C FROM clients"))["C"];
-$services = mysqli_fetch_assoc(mysqli_query($conn,"SELECT COUNT(*) AS C FROM services"))["C"];
-$bookings = mysqli_fetch_assoc(mysqli_query($conn,"SELECT COUNT(*) AS C FROM bookings"))["C"];
+include "config/db.php";
 
-$revRow = mysqli_fetch_assoc(mysqli_query($conn, "SELECT IFNULL(SUM(amount_paid),0) AS S FROM payments"));
-$revenue = $revRow["S"];
+// It is good practice to check if $conn exists before running queries
+if (isset($conn)) {
+    $clients = mysqli_fetch_assoc(mysqli_query($conn,"SELECT COUNT(*) AS C FROM clients"))["C"];
+    $services = mysqli_fetch_assoc(mysqli_query($conn,"SELECT COUNT(*) AS C FROM services"))["C"];
+    $bookings = mysqli_fetch_assoc(mysqli_query($conn,"SELECT COUNT(*) AS C FROM bookings"))["C"];
+
+    $revRow = mysqli_fetch_assoc(mysqli_query($conn, "SELECT IFNULL(SUM(amount_paid),0) AS S FROM payments"));
+    $revenue = $revRow["S"];
+} else {
+    die("Database connection variable '$conn' not found. Check config/db.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +25,7 @@ $revenue = $revRow["S"];
         <link rel="stylesheet" href="style.css">
     </head>
     <body class="bg-light">
-        <?php include "nav.php"; ?>
+        <?php include "components/nav.php"; ?>
 
         <div class="container mt-5">
             <h2 class="mb-5">Dashboard</h2>
@@ -60,8 +66,8 @@ $revenue = $revRow["S"];
 
             <div class="mt-5 d-flex align-items-center justify-content-start px-3">
                 <span class="fw-bold me-3">Quick links:</span>
-                <a href="/assessment_beginner/page/clients_add.php" class="btn btn-outline-primary btn-sm me-2">Add Client</a>
-                <a href="/assessment_beginner/page/bookings_create.php" class="btn btn-outline-success btn-sm">Create Booking</a>
+                <a href="page/clients_add.php" class="btn btn-outline-primary btn-sm me-2">Add Client</a>
+                <a href="page/bookings_create.php" class="btn btn-outline-success btn-sm">Create Booking</a>
             </div>
         </div>
 

@@ -44,7 +44,7 @@
                         <a class="nav-link" href="/assessment_beginner/page/tools_list_assign.php">Tools Assignment</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/assessment_beginner/page/payment_list.php">Payments</a>
+                        <a class="nav-link" href="/assessment_beginner/page/payments_list.php">Payments</a>
                     </li>
                 </ul>
             </div>

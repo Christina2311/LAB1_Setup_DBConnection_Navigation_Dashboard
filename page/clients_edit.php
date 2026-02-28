@@ -1,5 +1,6 @@
 <?php
-include "../db.php";
+include "../config/db.php";
+
 $id = intval($_GET['id']);
 $get = mysqli_query($conn, "SELECT * FROM clients WHERE client_id = $id");
 $client = mysqli_fetch_assoc($get);
@@ -24,7 +25,7 @@ if (isset($_POST['update'])) {
         <link rel="stylesheet" href="../style.css">
     </head>
     <body class="bg-light">
-        <?php include "../nav.php"; ?>
+        <?php include "../components/nav.php"; ?>
 
         <div class="container mt-5 p-5">
             <div class="row justify-content-center">
