@@ -1,4 +1,11 @@
 <?php
+session_start();
+ 
+// If not logged in, redirect to login
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit();
+}
 
 include "config/db.php";
 
@@ -29,6 +36,7 @@ if (isset($conn)) {
 
         <div class="container mt-5">
             <h2 class="mb-5">Dashboard</h2>
+            <h2>Welcome, <?php echo $_SESSION['username']; ?>!</h2>
 
             <div class="row g-4 justify-content-center">
                 <div class="col-md-3">
